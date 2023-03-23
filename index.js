@@ -7,7 +7,7 @@ import tareaRoutes from "./routes/tareaRoutes.js";
 import cors from "cors";
 const app = express();
 dotenv.config();
-
+console.log("comienza brother");
 app.use(
   cors({
     origin: `${process.env.URL_FRONTEND}`,
