@@ -8,6 +8,8 @@ import cors from "cors";
 const app = express();
 dotenv.config();
 console.log("comienza brother");
+process.stdout.write("comienza brother");
+
 app.use(
   cors({
     origin: `${process.env.URL_FRONTEND}`,
