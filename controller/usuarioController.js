@@ -36,6 +36,7 @@ const registrar = async (req, res) => {
 };
 
 const autenticar = async (req, res) => {
+  console.log("hola");
   try {
     const { email, password } = req.body;
 
