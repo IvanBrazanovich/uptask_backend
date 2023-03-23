@@ -31,12 +31,12 @@ const registrar = async (req, res) => {
       msg: "Usuario creado correctamente",
     });
   } catch (err) {
-    console.log(err);
+    process.stdout.write(err);
   }
 };
 
 const autenticar = async (req, res) => {
-  console.log("hola");
+  process.stdout.write(req.body, "hola");
   try {
     const { email, password } = req.body;
 
@@ -55,7 +55,7 @@ const autenticar = async (req, res) => {
     }
 
     //Comprobar su password
-
+    process.stdout.write("llega hasta acá");
     if (await usuario.comprobarPassword(password)) {
       res.json({
         _id: usuario._id,
@@ -68,7 +68,7 @@ const autenticar = async (req, res) => {
       return res.status(404).json({ msg: error.message });
     }
   } catch (err) {
-    console.log(err);
+    process.stdout.write(err);
   }
 };
 
