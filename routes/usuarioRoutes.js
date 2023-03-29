@@ -15,8 +15,6 @@ const router = express.Router();
 
 //Auentitcación, registro y confirmación de usuarios
 
-process.stdout.write("llega hasta usuario Routes");
-
 router.post("/", registrar);
 
 router.post("/login", autenticar);
